@@ -14,22 +14,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var toDoList: UITableView!
 //Outlets
 //Code
-    //Checklist
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+     
+        toDoList.register(UINib.init(nibName: "CheckMarkCell", bundle: nil), forCellReuseIdentifier: "CheckListIdentifier")
+        toDoList.dataSource = self
+        toDoList.delegate = self
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Global.toDoListArray.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = Global.toDoListArray[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListIdentifier") as! CheckMarkCell
+        cell.lblTitle.text = Global.toDoListArray[indexPath.row]
+        cell.selectionStyle = .none
+        cell.btnCheckMark.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
         return cell
     }
     
-    //Checklist
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44.0
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @objc func checkMarkButtonClicked ( sender: UIButton) {
+        
+        if sender.isSelected {
+            sender.isSelected = false
+            
+        }else{
+            
+            sender.isSelected = true
+            
+        }
+        toDoList.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {

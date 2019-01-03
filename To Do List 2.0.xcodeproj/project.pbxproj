@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		04D10C23202D322C002AA098 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D10C22202D322C002AA098 /* SaveViewController.swift */; };
+		0EF80E6421DE4E940012CF03 /* CheckMarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF80E6221DE4E940012CF03 /* CheckMarkCell.swift */; };
+		0EF80E6521DE4E940012CF03 /* CheckMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6321DE4E940012CF03 /* CheckMarkCell.xib */; };
+		0EF80E6721DE51A30012CF03 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF80E6621DE51A30012CF03 /* TableViewCell.swift */; };
+		0EF80E7021DE56350012CF03 /* Checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6A21DE55EA0012CF03 /* Checked@2x.png */; };
+		0EF80E7121DE56350012CF03 /* Checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6821DE55EA0012CF03 /* Checked@3x.png */; };
+		0EF80E7221DE56350012CF03 /* UnChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6921DE55EA0012CF03 /* UnChecked@2x.png */; };
+		0EF80E7321DE56350012CF03 /* UnChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6B21DE55EA0012CF03 /* UnChecked@3x.png */; };
 		1BEEA232202D23F100730F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA231202D23F100730F2A /* AppDelegate.swift */; };
 		1BEEA234202D23F100730F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA233202D23F100730F2A /* ViewController.swift */; };
 		1BEEA237202D23F100730F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEEA235202D23F100730F2A /* Main.storyboard */; };
@@ -38,6 +45,13 @@
 
 /* Begin PBXFileReference section */
 		04D10C22202D322C002AA098 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
+		0EF80E6221DE4E940012CF03 /* CheckMarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMarkCell.swift; sourceTree = "<group>"; };
+		0EF80E6321DE4E940012CF03 /* CheckMarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckMarkCell.xib; sourceTree = "<group>"; };
+		0EF80E6621DE51A30012CF03 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0EF80E6821DE55EA0012CF03 /* Checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked@3x.png"; sourceTree = "<group>"; };
+		0EF80E6921DE55EA0012CF03 /* UnChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UnChecked@2x.png"; sourceTree = "<group>"; };
+		0EF80E6A21DE55EA0012CF03 /* Checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked@2x.png"; sourceTree = "<group>"; };
+		0EF80E6B21DE55EA0012CF03 /* UnChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UnChecked@3x.png"; sourceTree = "<group>"; };
 		1BEEA22E202D23F100730F2A /* To Do List 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEEA231202D23F100730F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEEA233202D23F100730F2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +117,13 @@
 		1BEEA230202D23F100730F2A /* To Do List 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				0EF80E6A21DE55EA0012CF03 /* Checked@2x.png */,
+				0EF80E6821DE55EA0012CF03 /* Checked@3x.png */,
+				0EF80E6921DE55EA0012CF03 /* UnChecked@2x.png */,
+				0EF80E6B21DE55EA0012CF03 /* UnChecked@3x.png */,
 				1BEEA231202D23F100730F2A /* AppDelegate.swift */,
 				1BEEA233202D23F100730F2A /* ViewController.swift */,
+				0EF80E6621DE51A30012CF03 /* TableViewCell.swift */,
 				1BEEA235202D23F100730F2A /* Main.storyboard */,
 				04D10C22202D322C002AA098 /* SaveViewController.swift */,
 				1BEEA264202D258C00730F2A /* Global.swift */,
@@ -112,6 +131,8 @@
 				1BEEA23D202D23F100730F2A /* LaunchScreen.storyboard */,
 				1BEEA240202D23F100730F2A /* Info.plist */,
 				1BEEA238202D23F100730F2A /* To_Do_List_2_0.xcdatamodeld */,
+				0EF80E6221DE4E940012CF03 /* CheckMarkCell.swift */,
+				0EF80E6321DE4E940012CF03 /* CheckMarkCell.xib */,
 			);
 			path = "To Do List 2.0";
 			sourceTree = "<group>";
@@ -241,9 +262,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF80E7321DE56350012CF03 /* UnChecked@3x.png in Resources */,
 				1BEEA23F202D23F100730F2A /* LaunchScreen.storyboard in Resources */,
+				0EF80E7121DE56350012CF03 /* Checked@3x.png in Resources */,
+				0EF80E7221DE56350012CF03 /* UnChecked@2x.png in Resources */,
+				0EF80E7021DE56350012CF03 /* Checked@2x.png in Resources */,
 				1BEEA23C202D23F100730F2A /* Assets.xcassets in Resources */,
 				1BEEA237202D23F100730F2A /* Main.storyboard in Resources */,
+				0EF80E6521DE4E940012CF03 /* CheckMarkCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +297,9 @@
 				1BEEA234202D23F100730F2A /* ViewController.swift in Sources */,
 				04D10C23202D322C002AA098 /* SaveViewController.swift in Sources */,
 				1BEEA23A202D23F100730F2A /* To_Do_List_2_0.xcdatamodeld in Sources */,
+				0EF80E6421DE4E940012CF03 /* CheckMarkCell.swift in Sources */,
 				1BEEA265202D258C00730F2A /* Global.swift in Sources */,
+				0EF80E6721DE51A30012CF03 /* TableViewCell.swift in Sources */,
 				1BEEA232202D23F100730F2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
