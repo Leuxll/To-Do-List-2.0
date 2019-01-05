@@ -47,11 +47,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="K1S-be-PqG"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kye Meh" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znx-8y-KqA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar9-wV-ze1">
                                 <rect key="frame" x="295" y="48" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="MBZ-cR-JGI" kind="show" id="Qlz-t0-TTD"/>
                                 </connections>
@@ -67,7 +73,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tasks" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ktr-Rb-lDi">
                                 <rect key="frame" x="16" y="70" width="97" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -77,6 +83,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home-icon-silhouette" landscapeImage="home-icon-silhouette" largeContentSizeImage="home-icon-silhouette" selectedImage="home-icon-silhouette" id="Zf7-YT-Urh"/>
                     <connections>
+                        <outlet property="imageView" destination="Znx-8y-KqA" id="qD8-Ml-Wa3"/>
                         <outlet property="toDoList" destination="0Ox-sr-uW2" id="udg-D0-gSp"/>
                     </connections>
                 </viewController>
@@ -188,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Kye Meh" width="1680" height="1050"/>
         <image name="home-icon-silhouette" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>

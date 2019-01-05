@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+
+let primaryColor = UIColor(red: 106 / 255, green: 17 / 255, blue: 203 / 255, alpha: 1)
+let secondaryColor = UIColor(red: 37 / 255, green: 117 / 255, blue: 252 / 255, alpha: 1)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

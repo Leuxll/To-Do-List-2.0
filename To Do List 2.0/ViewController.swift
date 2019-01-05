@@ -11,12 +11,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 //Outlets
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var toDoList: UITableView!
 //Outlets
 //Code
+    
+    var window: UIWindow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
      
         toDoList.register(UINib.init(nibName: "CheckMarkCell", bundle: nil), forCellReuseIdentifier: "CheckListIdentifier")
         toDoList.dataSource = self
@@ -41,6 +46,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 44.0
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let button = UIButton(type: .system)
+        button.setTitle("Close", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .yellow
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.addTarget(self, action: #selector(handleOpenClose), for: .touchUpInside)
+        
+        return button
+    }
+    
+    @objc func handleOpenClose() {
+        
+        print("Trying to expand and close")
+        for row in Global.toDoListArray[0].indices {
+            
+            print(0, row)
+            
+        }
+        
+      //  toDoList.deleteRows(at: <#T##[IndexPath]#>, with: <#T##UITableViewRowAnimation#>)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Global.toDoListArray.count
+    }
+    
     @objc func checkMarkButtonClicked ( sender: UIButton) {
         
         if sender.isSelected {
@@ -53,6 +89,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         toDoList.reloadData()
     }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         toDoList.reloadData()
