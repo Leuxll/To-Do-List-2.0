@@ -56,17 +56,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar9-wV-ze1">
-                                <rect key="frame" x="295" y="48" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MBZ-cR-JGI" kind="show" id="Qlz-t0-TTD"/>
-                                </connections>
-                            </button>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYC-eQ-gWd">
                                 <rect key="frame" x="0.0" y="732" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -82,6 +71,17 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar9-wV-ze1">
+                                <rect key="frame" x="309" y="53" width="66" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MBZ-cR-JGI" kind="show" id="Qlz-t0-TTD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -136,89 +136,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="3Vs-HQ-efL">
-                                <rect key="frame" x="16" y="44" width="343" height="103"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="3Vs-HQ-efL">
+                                <rect key="frame" x="16" y="111" width="343" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-Mc-DYd">
-                                <rect key="frame" x="16" y="44" width="343" height="103"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="103" id="3p8-9C-a4U"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlj-Mc-DYd">
+                                <rect key="frame" x="16" y="125" width="343" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="Zg9-un-biw">
-                                <rect key="frame" x="16" y="155" width="343" height="197"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="197" id="C4i-85-HEh"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="Zg9-un-biw">
+                                <rect key="frame" x="176" y="222" width="183" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F20-df-79g">
-                                <rect key="frame" x="16" y="155" width="343" height="197"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F20-df-79g">
+                                <rect key="frame" x="177" y="239" width="182" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-Yi-wyd">
-                                <rect key="frame" x="16" y="360" width="343" height="197"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-Yi-wyd">
+                                <rect key="frame" x="176" y="438" width="183" height="324"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3e-jW-NO0">
-                                <rect key="frame" x="16" y="360" width="343" height="197"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="197" id="qKe-sy-7MP"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3e-jW-NO0">
+                                <rect key="frame" x="177" y="453" width="183" height="293"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="acF-CN-df9">
-                                <rect key="frame" x="16" y="565" width="343" height="197"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kye Meh" translatesAutoresizingMaskIntoConstraints="NO" id="acF-CN-df9">
+                                <rect key="frame" x="16" y="222" width="153" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoH-gD-Kx3">
-                                <rect key="frame" x="16" y="565" width="343" height="197"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoH-gD-Kx3">
+                                <rect key="frame" x="16" y="239" width="153" height="507"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71s-2O-dnY">
+                                <rect key="frame" x="16" y="44" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-back-filled-50"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Swb-Pw-iYS" eventType="touchUpInside" id="zhP-IU-O6X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Q3e-jW-NO0" firstAttribute="top" secondItem="F20-df-79g" secondAttribute="bottom" constant="8" symbolic="YES" id="3YC-Nj-82e"/>
-                            <constraint firstItem="SoH-gD-Kx3" firstAttribute="bottom" secondItem="acF-CN-df9" secondAttribute="bottom" id="4Pw-32-vTt"/>
-                            <constraint firstItem="Zlj-Mc-DYd" firstAttribute="top" secondItem="3Vs-HQ-efL" secondAttribute="top" id="4vA-y2-xcE"/>
-                            <constraint firstItem="Jem-jH-TFh" firstAttribute="bottom" secondItem="SoH-gD-Kx3" secondAttribute="bottom" constant="16" id="6ST-7C-XCa"/>
-                            <constraint firstItem="Q3e-jW-NO0" firstAttribute="top" secondItem="Zg9-un-biw" secondAttribute="bottom" constant="8" symbolic="YES" id="9KY-Be-j8n"/>
-                            <constraint firstItem="Zg9-un-biw" firstAttribute="leading" secondItem="F20-df-79g" secondAttribute="leading" id="A5r-3Y-hcC"/>
-                            <constraint firstItem="3Vs-HQ-efL" firstAttribute="leading" secondItem="Zg9-un-biw" secondAttribute="leading" id="BaV-0K-DVC"/>
-                            <constraint firstItem="acF-CN-df9" firstAttribute="top" secondItem="Q3e-jW-NO0" secondAttribute="bottom" constant="8" symbolic="YES" id="D1Q-sO-e3f"/>
-                            <constraint firstItem="Zg9-un-biw" firstAttribute="trailing" secondItem="F20-df-79g" secondAttribute="trailing" id="Fli-fd-fZb"/>
-                            <constraint firstItem="Zg9-un-biw" firstAttribute="top" secondItem="F20-df-79g" secondAttribute="top" id="Jf0-nA-sgm"/>
-                            <constraint firstItem="acF-CN-df9" firstAttribute="leading" secondItem="SoH-gD-Kx3" secondAttribute="leading" id="KlF-eG-TYC"/>
-                            <constraint firstItem="Zg9-un-biw" firstAttribute="trailing" secondItem="OTT-Yi-wyd" secondAttribute="trailing" id="LwS-8w-FUl"/>
-                            <constraint firstItem="Zlj-Mc-DYd" firstAttribute="top" secondItem="Jem-jH-TFh" secondAttribute="top" id="O9T-b1-QbX"/>
-                            <constraint firstItem="Zlj-Mc-DYd" firstAttribute="trailing" secondItem="3Vs-HQ-efL" secondAttribute="trailing" id="OM5-9R-N75"/>
-                            <constraint firstItem="OTT-Yi-wyd" firstAttribute="trailing" secondItem="acF-CN-df9" secondAttribute="trailing" id="QC0-oi-ywG"/>
-                            <constraint firstItem="Zg9-un-biw" firstAttribute="leading" secondItem="OTT-Yi-wyd" secondAttribute="leading" id="RWH-6M-lY4"/>
-                            <constraint firstItem="F20-df-79g" firstAttribute="top" secondItem="Zlj-Mc-DYd" secondAttribute="bottom" constant="8" symbolic="YES" id="S8K-Kx-c4I"/>
-                            <constraint firstItem="Q3e-jW-NO0" firstAttribute="top" secondItem="OTT-Yi-wyd" secondAttribute="top" id="Vmy-QS-u8e"/>
-                            <constraint firstItem="OTT-Yi-wyd" firstAttribute="trailing" secondItem="Q3e-jW-NO0" secondAttribute="trailing" id="WZS-tB-2f3"/>
-                            <constraint firstItem="3Vs-HQ-efL" firstAttribute="trailing" secondItem="Zg9-un-biw" secondAttribute="trailing" id="XBR-MT-L8b"/>
-                            <constraint firstItem="Q3e-jW-NO0" firstAttribute="leading" secondItem="acF-CN-df9" secondAttribute="leading" id="cLb-2d-2Hz"/>
-                            <constraint firstItem="3Vs-HQ-efL" firstAttribute="trailing" secondItem="4Ak-Yu-7Xl" secondAttribute="trailingMargin" id="h91-Ji-ayW"/>
-                            <constraint firstItem="Q3e-jW-NO0" firstAttribute="leading" secondItem="OTT-Yi-wyd" secondAttribute="leading" id="iTf-k5-ZQz"/>
-                            <constraint firstItem="Zlj-Mc-DYd" firstAttribute="leading" secondItem="4Ak-Yu-7Xl" secondAttribute="leadingMargin" id="ljV-aZ-kGW"/>
-                            <constraint firstItem="Zlj-Mc-DYd" firstAttribute="leading" secondItem="3Vs-HQ-efL" secondAttribute="leading" id="ngX-JR-nJe"/>
-                            <constraint firstItem="acF-CN-df9" firstAttribute="top" secondItem="OTT-Yi-wyd" secondAttribute="bottom" constant="8" symbolic="YES" id="oUD-kQ-wpd"/>
-                            <constraint firstItem="F20-df-79g" firstAttribute="top" secondItem="3Vs-HQ-efL" secondAttribute="bottom" constant="8" symbolic="YES" id="qKe-TK-CpR"/>
-                            <constraint firstItem="acF-CN-df9" firstAttribute="top" secondItem="SoH-gD-Kx3" secondAttribute="top" id="uzN-xJ-ZrO"/>
-                            <constraint firstItem="SoH-gD-Kx3" firstAttribute="trailing" secondItem="acF-CN-df9" secondAttribute="trailing" id="wQx-5I-y9z"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jem-jH-TFh"/>
                     </view>
                     <connections>
                         <outlet property="DueDate" destination="Zlj-Mc-DYd" id="qGY-Pf-sbe"/>
-                        <outlet property="dueDateImageView" destination="Zlj-Mc-DYd" id="Ofa-Lw-n8b"/>
+                        <outlet property="dueDateImg" destination="3Vs-HQ-efL" id="eAf-uB-gJv"/>
                         <outlet property="subtask1" destination="F20-df-79g" id="wMW-QU-cAb"/>
                         <outlet property="subtask1Img" destination="Zg9-un-biw" id="QaN-2a-PHy"/>
                         <outlet property="subtask2" destination="Q3e-jW-NO0" id="fsz-en-MAV"/>
@@ -229,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCM-uo-3cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="900"/>
+            <point key="canvasLocation" x="1317.5999999999999" y="900"/>
         </scene>
         <!--Save View Controller-->
         <scene sceneID="ngC-18-KQg">
@@ -335,8 +311,10 @@
     <resources>
         <image name="Kye Meh" width="1680" height="1050"/>
         <image name="home-icon-silhouette" width="48" height="48"/>
+        <image name="icons8-back-filled-50" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yPc-O8-hfb"/>
         <segue reference="T6u-dH-7U2"/>
     </inferredMetricsTieBreakers>
 </document>
