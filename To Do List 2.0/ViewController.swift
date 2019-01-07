@@ -8,6 +8,12 @@
 
 import UIKit
 
+//struct CellData {
+//    var opened = Bool()
+//    var title : [String] = [""]
+//    var sectionData : ([String] , [String], [String])
+//}
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 //Outlets
@@ -16,16 +22,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //Outlets
 //Code
     
-    var window: UIWindow?
+    //var tableViewData = [CellData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        tableViewData = [CellData(opened: false, title: Global.toDoListArray, sectionData: Global.subTasks1, Global.subTasks2)]
         
-     
-        toDoList.register(UINib.init(nibName: "CheckMarkCell", bundle: nil), forCellReuseIdentifier: "CheckListIdentifier")
-        toDoList.dataSource = self
-        toDoList.delegate = self
+      toDoList.register(UINib.init(nibName: "CheckMarkCell", bundle: nil), forCellReuseIdentifier: "CheckListIdentifier")
         
     }
     
@@ -43,40 +47,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44.0
+        return 45.0
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let button = UIButton(type: .system)
-        button.setTitle("Close", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .yellow
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(handleOpenClose), for: .touchUpInside)
-        
-        return button
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let button = UIButton(type: .system)
+//        button.setTitle("Close", for: .normal)
+//        button.setTitleColor(.black, for: .normal)
+//        button.backgroundColor = .yellow
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+//        button.addTarget(self, action: #selector(handleOpenClose), for: .touchUpInside)
+//
+//        return button
+//    }
     
-    @objc func handleOpenClose() {
-        
-        print("Trying to expand and close")
-        for row in Global.toDoListArray[0].indices {
-            
-            print(0, row)
-            
-        }
-        
+//    @objc func handleOpenClose() {
+//
+//        print("Trying to expand and close")
+//        for row in Global.toDoListArray[0].indices {
+//
+//            print(0, row)
+//
+//        }
+    
       //  toDoList.deleteRows(at: <#T##[IndexPath]#>, with: <#T##UITableViewRowAnimation#>)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return Global.toDoListArray.count
-    }
-    
+//    }
+
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 44
+//    }
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return Global.toDoListArray.count
+//    }
+
     @objc func checkMarkButtonClicked ( sender: UIButton) {
         
         if sender.isSelected {
@@ -90,16 +94,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toDoList.reloadData()
     }
     
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        toDoList.reloadData()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }

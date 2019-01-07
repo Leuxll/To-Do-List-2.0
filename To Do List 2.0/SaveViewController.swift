@@ -17,6 +17,8 @@ class SaveViewController: UIViewController {
         
         Global.toDoListArray.append(itemToAdd.text!)
         
+        Global.date.append(addDate.text!)
+        
     }
 //Outlets
 //Code
