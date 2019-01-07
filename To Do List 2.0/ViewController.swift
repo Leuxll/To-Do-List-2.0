@@ -8,11 +8,24 @@
 
 import UIKit
 
-//struct CellData {
-//    var opened = Bool()
-//    var title : [String] = [""]
-//    var sectionData : ([String] , [String], [String])
-//}
+struct tasks {
+    
+    var task: String?
+    var dueDate: String?
+    var subtask1: String?
+    var subtask2: String?
+    var subtask3: String?
+    
+    init(task: String, dueDate: String, subtask1: String, subtask2: String, subtask3: String)
+    {
+        self.task = task
+        self.dueDate = dueDate
+        self.subtask1 = subtask1
+        self.subtask2 = subtask2
+        self.subtask3 = subtask3
+    }
+    
+}
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -22,12 +35,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //Outlets
 //Code
     
-    //var tableViewData = [CellData]()
-
+    var task = [tasks]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableViewData = [CellData(opened: false, title: Global.toDoListArray, sectionData: Global.subTasks1, Global.subTasks2)]
+        imageView.layer.cornerRadius = 15
+        imageView.clipsToBounds = true
         
       toDoList.register(UINib.init(nibName: "CheckMarkCell", bundle: nil), forCellReuseIdentifier: "CheckListIdentifier")
         
@@ -47,8 +61,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45.0
+        return 45
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailedViewController = storyboard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
+        
+        detailedViewController.Date = Global.date[indexPath.row]
+        detailedViewController.subTask1 = Global.subTasks1[indexPath.row]
+        detailedViewController.subTask2 = Global.subTasks2[indexPath.row]
+        detailedViewController.subTask3 = Global.subTasks3[indexPath.row]
+        
+        
+        show(detailedViewController, sender: self)
+    }
+    
     
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let button = UIButton(type: .system)
@@ -60,19 +89,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //
 //        return button
 //    }
-    
+//
 //    @objc func handleOpenClose() {
 //
+//        let section = 0
+//
+//        var indexPaths = [IndexPath]()
+//
 //        print("Trying to expand and close")
-//        for row in Global.toDoListArray[0].indices {
+//        for row in Global.toDoListArray[section].indices {
 //
 //            print(0, row)
 //
+//            let indexPath = IndexPath(row: row, section: section)
+//            indexPaths.append(indexPath)
 //        }
-    
-      //  toDoList.deleteRows(at: <#T##[IndexPath]#>, with: <#T##UITableViewRowAnimation#>)
+//
+//        toDoList.deleteRows(at: indexPaths, with: .fade)
 //    }
-
+//
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 44
 //    }

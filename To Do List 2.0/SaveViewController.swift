@@ -13,11 +13,18 @@ class SaveViewController: UIViewController {
 //Outlets
     @IBOutlet weak var itemToAdd: UITextField!
     @IBOutlet weak var addDate: UITextField!
+    @IBOutlet weak var subtask1: UITextField!
+    @IBOutlet weak var subtask2: UITextField!
+    @IBOutlet weak var subtask3: UITextField!
     @IBAction func saveItem(_ sender: UIButton) {
         
         Global.toDoListArray.append(itemToAdd.text!)
+        Global.subTasks1.append(subtask1.text!)
+        Global.subTasks2.append(subtask2.text!)
+        Global.subTasks3.append(subtask3.text!)
         
-        Global.date.append(addDate.text!)
+        //Global.date.append(addDate.text!)
+        
         
     }
 //Outlets
