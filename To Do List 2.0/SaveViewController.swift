@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SaveViewController: UIViewController {
 
 //Outlets
@@ -18,17 +19,24 @@ class SaveViewController: UIViewController {
     @IBOutlet weak var subtask3: UITextField!
     @IBAction func saveItem(_ sender: UIButton) {
         
-        Global.toDoListArray.append(itemToAdd.text!)
-        Global.subTasks1.append(subtask1.text!)
-        Global.subTasks2.append(subtask2.text!)
-        Global.subTasks3.append(subtask3.text!)
+//        Global.toDoListArray.append(itemToAdd.text!)
+//        Global.toDoListArray.append(addDate.text!)
+//        Global.toDoListArray.append(subtask1.text!)
+//        Global.toDoListArray.append(subtask2.text!)
+//        Global.toDoListArray.append(subtask3.text!)
         
-        //Global.date.append(addDate.text!)
+        ViewController.toDoListArray.append(itemToAdd.text!)
+        ViewController.toDoListArray.append(addDate.text!)
+        ViewController.toDoListArray.append(subtask1.text!)
+        ViewController.toDoListArray.append(subtask2.text!)
+        ViewController.toDoListArray.append(subtask3.text!)
+        
         
         
     }
 //Outlets
 //Code
+    
     
     private var datePicker: UIDatePicker?
     
@@ -81,5 +89,6 @@ class SaveViewController: UIViewController {
     */
 
 }
+
 
 //Code

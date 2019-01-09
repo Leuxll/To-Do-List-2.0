@@ -7,14 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class Global {
     static var toDoListArray : [String] = []
     
-    static var subTasks1 : [String] = []
-    static var subTasks2 : [String] = []
-    static var subTasks3 : [String] = []
     
-    static var date : [String] = []
-    
+
 }
+

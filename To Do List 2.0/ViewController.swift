@@ -9,13 +9,13 @@
 import UIKit
 
 struct tasks {
-    
-    var task: String?
+
+    var task: String!
     var dueDate: String?
     var subtask1: String?
     var subtask2: String?
     var subtask3: String?
-    
+
     init(task: String, dueDate: String, subtask1: String, subtask2: String, subtask3: String)
     {
         self.task = task
@@ -24,7 +24,7 @@ struct tasks {
         self.subtask2 = subtask2
         self.subtask3 = subtask3
     }
-    
+
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -36,9 +36,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //Code
     
     var task = [tasks]()
+    static var toDoListArray : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         imageView.layer.cornerRadius = 15
         imageView.clipsToBounds = true
@@ -47,8 +49,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    func listtask() {
+        
+        
+        
+        
+        
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Global.toDoListArray.count
+        return task.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
