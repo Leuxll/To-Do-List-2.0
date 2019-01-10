@@ -19,29 +19,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-Ps-oaS">
-                        <rect key="frame" x="54" y="11" width="42" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-Ps-oaS">
+                        <rect key="frame" x="54" y="11" width="250" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-1X-gdK">
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-1X-gdK">
                         <rect key="frame" x="16" y="10" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="30" id="ftP-tS-3Ak"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button" image="UnChecked.png"/>
                         <state key="selected" image="Checked.png"/>
                     </button>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3CR-Fi-kcW"/>
-                    <constraint firstItem="CW3-1X-gdK" firstAttribute="centerY" secondItem="gJ3-Ps-oaS" secondAttribute="centerY" id="6Wm-au-7th"/>
-                    <constraint firstItem="CW3-1X-gdK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="Jdm-dh-NeH"/>
-                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="leading" secondItem="CW3-1X-gdK" secondAttribute="trailing" constant="8" symbolic="YES" id="MR7-fG-gS5"/>
-                    <constraint firstItem="CW3-1X-gdK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Wvq-Fv-Y9r"/>
-                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="fmL-ZW-2h8"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

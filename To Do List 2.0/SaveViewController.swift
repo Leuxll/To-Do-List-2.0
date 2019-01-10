@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 
 class SaveViewController: UIViewController {
@@ -18,36 +19,20 @@ class SaveViewController: UIViewController {
     @IBOutlet weak var subtask2: UITextField!
     @IBOutlet weak var subtask3: UITextField!
     @IBAction func saveItem(_ sender: UIButton) {
-        
-//        Global.toDoListArray.append(itemToAdd.text!)
-//        Global.toDoListArray.append(addDate.text!)
-//        Global.toDoListArray.append(subtask1.text!)
-//        Global.toDoListArray.append(subtask2.text!)
-//        Global.toDoListArray.append(subtask3.text!)
-        
-        ViewController.toDoListArray.append(itemToAdd.text!)
-        ViewController.toDoListArray.append(addDate.text!)
-        ViewController.toDoListArray.append(subtask1.text!)
-        ViewController.toDoListArray.append(subtask2.text!)
-        ViewController.toDoListArray.append(subtask3.text!)
-        
-        
-        
+        addTask()
     }
 //Outlets
 //Code
     
+    var refTasks: DatabaseReference!
     
     private var datePicker: UIDatePicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(SaveViewController.dateChanged(datePicker:)), for: .valueChanged)
+        refTasks = Database.database().reference().child("tasks")
         
-        addDate.inputView = datePicker
 
         var toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -58,15 +43,27 @@ class SaveViewController: UIViewController {
             
         itemToAdd.inputAccessoryView = toolbar
         addDate.inputAccessoryView = toolbar
+        subtask1.inputAccessoryView = toolbar
+        subtask2.inputAccessoryView = toolbar
+        subtask3.inputAccessoryView = toolbar
     }
     
-    @objc func dateChanged(datePicker: UIDatePicker) {
+    func addTask() {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        addDate.text = dateFormatter.string(from: datePicker.date)
+        let key = refTasks.childByAutoId().key
+        
+        let task = ["id" : key,
+                    "task": itemToAdd.text! as String,
+                    "dueDate": addDate.text! as String,
+                    "subtask1": subtask1.text! as String,
+                    "subtask2": subtask2.text! as String,
+                    "subtask3": subtask3.text! as String]
+        
+        refTasks.child(key!).setValue(task)
+        
         
     }
+    
 
     @objc func doneClicked() {
         view.endEditing(true)

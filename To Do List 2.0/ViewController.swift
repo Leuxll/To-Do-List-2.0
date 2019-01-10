@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 struct tasks {
 
@@ -15,15 +16,6 @@ struct tasks {
     var subtask1: String?
     var subtask2: String?
     var subtask3: String?
-
-    init(task: String, dueDate: String, subtask1: String, subtask2: String, subtask3: String)
-    {
-        self.task = task
-        self.dueDate = dueDate
-        self.subtask1 = subtask1
-        self.subtask2 = subtask2
-        self.subtask3 = subtask3
-    }
 
 }
 
@@ -36,12 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //Code
     
     var task = [tasks]()
-    static var toDoListArray : [String] = []
+    var ref: DatabaseReference?
+    var databaseHandle: DatabaseHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        listtask()
         imageView.layer.cornerRadius = 15
         imageView.clipsToBounds = true
         
@@ -50,29 +43,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func listtask() {
+        ref = Database.database().reference()
+        databaseHandle = ref?.child("tasks").queryOrdered(byChild: "tasks").observe(.childAdded, with: { snapshot in
         
-        
-        
-        
-        
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return task.count
+            let value = snapshot.value as? NSMutableDictionary
+            
+            let dueDate = value?["dueDate"] as? String
+            let subtask1 = value?["subtask1"] as? String
+            let subtask2 = value?["subtask2"] as? String
+            let subtask3 = value?["subtask3"] as? String
+            let task = value?["task"] as? String
+            
+            self.task.append(tasks(task: task, dueDate: dueDate, subtask1: subtask1, subtask2: subtask2, subtask3: subtask3))
+        self.toDoList.reloadData()
+    })
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListIdentifier") as! CheckMarkCell
-        cell.lblTitle.text = Global.toDoListArray[indexPath.row]
+        cell.lblTitle.text = task[indexPath.row].task
         cell.selectionStyle = .none
         cell.btnCheckMark.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return task.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -80,53 +77,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailedViewController = storyboard.instantiateViewController(withIdentifier: "DetailedViewController") as! DetailedViewController
         
-        detailedViewController.Date = Global.date[indexPath.row]
-        detailedViewController.subTask1 = Global.subTasks1[indexPath.row]
-        detailedViewController.subTask2 = Global.subTasks2[indexPath.row]
-        detailedViewController.subTask3 = Global.subTasks3[indexPath.row]
+        detailedViewController.title = task[indexPath.row].task!
+        detailedViewController.Date = task[indexPath.row].dueDate!
+        detailedViewController.subTask1 = task[indexPath.row].subtask1!
+        detailedViewController.subTask2 = task[indexPath.row].subtask2!
+        detailedViewController.subTask3 = task[indexPath.row].subtask3!
         
-        
-        show(detailedViewController, sender: self)
+        showDetailViewController(detailedViewController, sender: self)
     }
     
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let button = UIButton(type: .system)
-//        button.setTitle("Close", for: .normal)
-//        button.setTitleColor(.black, for: .normal)
-//        button.backgroundColor = .yellow
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-//        button.addTarget(self, action: #selector(handleOpenClose), for: .touchUpInside)
-//
-//        return button
-//    }
-//
-//    @objc func handleOpenClose() {
-//
-//        let section = 0
-//
-//        var indexPaths = [IndexPath]()
-//
-//        print("Trying to expand and close")
-//        for row in Global.toDoListArray[section].indices {
-//
-//            print(0, row)
-//
-//            let indexPath = IndexPath(row: row, section: section)
-//            indexPaths.append(indexPath)
-//        }
-//
-//        toDoList.deleteRows(at: indexPaths, with: .fade)
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 44
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return Global.toDoListArray.count
-//    }
-
     @objc func checkMarkButtonClicked ( sender: UIButton) {
         
         if sender.isSelected {
@@ -138,6 +97,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         }
         toDoList.reloadData()
+    }
+    
+    func delete(id: String) {
+
+        ref?.childByAutoId().setValue(nil)
+        
     }
     
 
