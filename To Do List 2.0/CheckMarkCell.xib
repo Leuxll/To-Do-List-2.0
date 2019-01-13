@@ -12,38 +12,54 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckListIdentifier" rowHeight="50" id="KGk-i7-Jjw" customClass="CheckMarkCell" customModule="To_Do_List_2_0" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckListIdentifier" rowHeight="88" id="KGk-i7-Jjw" customClass="CheckMarkCell" customModule="To_Do_List_2_0" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-Ps-oaS">
-                        <rect key="frame" x="54" y="11" width="250" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-Ps-oaS">
+                        <rect key="frame" x="16" y="11" width="288" height="35"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-1X-gdK">
-                        <rect key="frame" x="16" y="10" width="30" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button" image="UnChecked.png"/>
-                        <state key="selected" image="Checked.png"/>
-                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U4-aM-P4v">
+                        <rect key="frame" x="16" y="60" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="prB-1F-n29"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAt-en-7Mw">
+                        <rect key="frame" x="74" y="60" width="230" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="5U4-aM-P4v" firstAttribute="top" secondItem="gJ3-Ps-oaS" secondAttribute="bottom" constant="14" id="6kB-vS-hmN"/>
+                    <constraint firstItem="5U4-aM-P4v" firstAttribute="baseline" secondItem="cAt-en-7Mw" secondAttribute="baseline" id="D1N-9X-cHW"/>
+                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="DQc-Sw-kJQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5U4-aM-P4v" secondAttribute="bottom" constant="-4" id="EA9-tn-qBn"/>
+                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="trailing" secondItem="cAt-en-7Mw" secondAttribute="trailing" id="Fwu-XL-1aI"/>
+                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="LZT-mb-Q19"/>
+                    <constraint firstItem="cAt-en-7Mw" firstAttribute="leading" secondItem="5U4-aM-P4v" secondAttribute="trailing" constant="8" symbolic="YES" id="bhp-YO-udC"/>
+                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="leading" secondItem="5U4-aM-P4v" secondAttribute="leading" id="eWb-jH-b3i"/>
+                    <constraint firstItem="5U4-aM-P4v" firstAttribute="firstBaseline" secondItem="cAt-en-7Mw" secondAttribute="firstBaseline" id="rzP-99-GTx"/>
+                    <constraint firstItem="gJ3-Ps-oaS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zkk-HP-Kho"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="btnCheckMark" destination="CW3-1X-gdK" id="OkB-gF-PU2"/>
+                <outlet property="dueDate" destination="cAt-en-7Mw" id="FTK-9t-vuv"/>
                 <outlet property="lblTitle" destination="gJ3-Ps-oaS" id="t76-1A-22M"/>
             </connections>
-            <point key="canvasLocation" x="129.59999999999999" y="155.62218890554723"/>
+            <point key="canvasLocation" x="129.59999999999999" y="172.71364317841082"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Checked.png" width="32" height="32"/>
-        <image name="UnChecked.png" width="32" height="32"/>
-    </resources>
 </document>

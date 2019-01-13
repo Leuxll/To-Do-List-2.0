@@ -13,6 +13,7 @@ import FirebaseDatabase
 class SaveViewController: UIViewController {
 
 //Outlets
+    var clickCounter = 0
     @IBOutlet weak var itemToAdd: UITextField!
     @IBOutlet weak var addDate: UITextField!
     @IBOutlet weak var subtask1: UITextField!
@@ -20,6 +21,7 @@ class SaveViewController: UIViewController {
     @IBOutlet weak var subtask3: UITextField!
     @IBAction func saveItem(_ sender: UIButton) {
         addTask()
+        
     }
 //Outlets
 //Code

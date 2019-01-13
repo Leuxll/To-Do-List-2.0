@@ -16,6 +16,7 @@ struct tasks {
     var subtask1: String?
     var subtask2: String?
     var subtask3: String?
+    var id: String?
 
 }
 
@@ -30,12 +31,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var task = [tasks]()
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         
         listtask()
-        imageView.layer.cornerRadius = 15
+        imageView.roundCorners(cornerRadius: 20)
         imageView.clipsToBounds = true
         
       toDoList.register(UINib.init(nibName: "CheckMarkCell", bundle: nil), forCellReuseIdentifier: "CheckListIdentifier")
@@ -53,8 +56,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let subtask2 = value?["subtask2"] as? String
             let subtask3 = value?["subtask3"] as? String
             let task = value?["task"] as? String
+            let id = value?["id"] as? String
             
-            self.task.append(tasks(task: task, dueDate: dueDate, subtask1: subtask1, subtask2: subtask2, subtask3: subtask3))
+            self.task.append(tasks(task: task, dueDate: dueDate, subtask1: subtask1, subtask2: subtask2, subtask3: subtask3, id: id))
         self.toDoList.reloadData()
     })
     }
@@ -63,8 +67,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListIdentifier") as! CheckMarkCell
         cell.lblTitle.text = task[indexPath.row].task
+        cell.dueDate.text = task[indexPath.row].dueDate
         cell.selectionStyle = .none
-        cell.btnCheckMark.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
+
         return cell
     }
     
@@ -86,27 +91,49 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         showDetailViewController(detailedViewController, sender: self)
     }
     
-    @objc func checkMarkButtonClicked ( sender: UIButton) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        if sender.isSelected {
-            sender.isSelected = false
+        let task = self.task[indexPath.row]
+                let alertController = UIAlertController(title:task.task, message: "Delete this task?", preferredStyle: .alert)
+        
+
+                let deleteAction = UIAlertAction(title: "Delete", style: .destructive){(_) in
+        
+                    self.deleteTask(id: task.id!)
+                    self.toDoList.reloadData()
+                    
+                }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default){(_) in
             
-        }else{
-            
-            sender.isSelected = true
+            alertController.dismiss(animated: true, completion: nil)
             
         }
+        
+
+                alertController.addAction(deleteAction)
+                alertController.addAction(cancelAction)
+                present(alertController, animated: true, completion: nil)
         toDoList.reloadData()
     }
     
-    func delete(id: String) {
+    func deleteTask(id:String) {
 
-        ref?.childByAutoId().setValue(nil)
+        Database.database().reference(withPath: "tasks").child(id).removeValue()
         
     }
-    
+        
 
 
+}
+
+extension UIView {
+    func roundCorners(cornerRadius: Double) {
+        // apply corner radius to the cards
+        layer.cornerRadius = CGFloat(cornerRadius)
+        clipsToBounds = true
+        layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
 }
 
 //Code

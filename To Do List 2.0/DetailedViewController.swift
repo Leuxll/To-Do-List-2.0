@@ -10,11 +10,9 @@ import UIKit
 
 class DetailedViewController: UIViewController {
 
-    @IBOutlet weak var dueDateImg: UIImageView!
     @IBOutlet weak var subtask1Img: UIImageView!
     @IBOutlet weak var subtask2Img: UIImageView!
     @IBOutlet weak var subtask3Img: UIImageView!
-    @IBOutlet weak var DueDate: UILabel!
     @IBOutlet weak var subtask1: UILabel!
     @IBOutlet weak var subtask2: UILabel!
     @IBOutlet weak var subtask3: UILabel!
@@ -34,12 +32,9 @@ class DetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DueDate.text! = Date
         subtask1.text! = subTask1
         subtask2.text! = subTask2
         subtask3.text! = subTask3
-        dueDateImg.layer.cornerRadius = 15
-        dueDateImg.clipsToBounds = true
         subtask1Img.layer.cornerRadius = 15
         subtask1Img.clipsToBounds = true
         subtask2Img.layer.cornerRadius = 15
