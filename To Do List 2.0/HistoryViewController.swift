@@ -16,8 +16,6 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var totalTasks: UILabel!
 
     
-    var nodeCount : Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let numberTasks = Database.database().reference()
