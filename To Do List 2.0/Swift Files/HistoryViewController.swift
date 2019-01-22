@@ -18,9 +18,10 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let numberTasks = Database.database().reference()
-        numberTasks.observe(.childAdded) { (snapshot) in
+        let numberTasks = Database.database().reference().child("tasks")
+        numberTasks.observe(.value) { (snapshot) in
             self.totalTasks.text = String(snapshot.childrenCount)
+    
         }
         
         purpleImg.layer.cornerRadius = 20

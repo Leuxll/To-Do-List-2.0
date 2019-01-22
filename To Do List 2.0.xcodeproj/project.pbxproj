@@ -10,15 +10,11 @@
 		04D10C23202D322C002AA098 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D10C22202D322C002AA098 /* SaveViewController.swift */; };
 		0E48898821E7770B00BCBD2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E48898721E7770B00BCBD2D /* GoogleService-Info.plist */; };
 		0E9F886C21E7847500795628 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E9F886B21E7841900795628 /* Poppins-Bold.ttf */; };
+		0EAFE44921F7065F00DCB9B6 /* CheckMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EAFE44821F7065F00DCB9B6 /* CheckMarkCell.xib */; };
+		0EAFE44B21F7067200DCB9B6 /* CheckMarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFE44A21F7067200DCB9B6 /* CheckMarkCell.swift */; };
 		0EBA864121E30B3C002E9CFF /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA864021E30B3C002E9CFF /* DetailedViewController.swift */; };
 		0EF000A121EA37D600F2599E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF000A021EA37D600F2599E /* HistoryViewController.swift */; };
-		0EF80E6421DE4E940012CF03 /* CheckMarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF80E6221DE4E940012CF03 /* CheckMarkCell.swift */; };
-		0EF80E6521DE4E940012CF03 /* CheckMarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6321DE4E940012CF03 /* CheckMarkCell.xib */; };
 		0EF80E6721DE51A30012CF03 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF80E6621DE51A30012CF03 /* TableViewCell.swift */; };
-		0EF80E7021DE56350012CF03 /* Checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6A21DE55EA0012CF03 /* Checked@2x.png */; };
-		0EF80E7121DE56350012CF03 /* Checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6821DE55EA0012CF03 /* Checked@3x.png */; };
-		0EF80E7221DE56350012CF03 /* UnChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6921DE55EA0012CF03 /* UnChecked@2x.png */; };
-		0EF80E7321DE56350012CF03 /* UnChecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF80E6B21DE55EA0012CF03 /* UnChecked@3x.png */; };
 		1BEEA232202D23F100730F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA231202D23F100730F2A /* AppDelegate.swift */; };
 		1BEEA234202D23F100730F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA233202D23F100730F2A /* ViewController.swift */; };
 		1BEEA237202D23F100730F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEEA235202D23F100730F2A /* Main.storyboard */; };
@@ -27,7 +23,6 @@
 		1BEEA23F202D23F100730F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEEA23D202D23F100730F2A /* LaunchScreen.storyboard */; };
 		1BEEA24A202D23F100730F2A /* To_Do_List_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA249202D23F100730F2A /* To_Do_List_2_0Tests.swift */; };
 		1BEEA255202D23F100730F2A /* To_Do_List_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA254202D23F100730F2A /* To_Do_List_2_0UITests.swift */; };
-		1BEEA265202D258C00730F2A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEA264202D258C00730F2A /* Global.swift */; };
 		32FD742C3A97EAF9E187CEA3 /* Pods_To_Do_List_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5254821B56D05648F4C36803 /* Pods_To_Do_List_2_0.framework */; };
 		5CE2C961E932EDC2C9EEB545 /* Pods_To_Do_List_2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B13FB2E9EB01831FF6F27B1 /* Pods_To_Do_List_2_0UITests.framework */; };
 		B81DD8597CF8D3546DB55727 /* Pods_To_Do_List_2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA652B383A77F35CA47A000 /* Pods_To_Do_List_2_0Tests.framework */; };
@@ -56,15 +51,11 @@
 		0E48898721E7770B00BCBD2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E9F886B21E7841900795628 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		0EA652B383A77F35CA47A000 /* Pods_To_Do_List_2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List_2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAFE44821F7065F00DCB9B6 /* CheckMarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckMarkCell.xib; sourceTree = "<group>"; };
+		0EAFE44A21F7067200DCB9B6 /* CheckMarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkCell.swift; sourceTree = "<group>"; };
 		0EBA864021E30B3C002E9CFF /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		0EF000A021EA37D600F2599E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		0EF80E6221DE4E940012CF03 /* CheckMarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMarkCell.swift; sourceTree = "<group>"; };
-		0EF80E6321DE4E940012CF03 /* CheckMarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckMarkCell.xib; sourceTree = "<group>"; };
 		0EF80E6621DE51A30012CF03 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		0EF80E6821DE55EA0012CF03 /* Checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked@3x.png"; sourceTree = "<group>"; };
-		0EF80E6921DE55EA0012CF03 /* UnChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UnChecked@2x.png"; sourceTree = "<group>"; };
-		0EF80E6A21DE55EA0012CF03 /* Checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked@2x.png"; sourceTree = "<group>"; };
-		0EF80E6B21DE55EA0012CF03 /* UnChecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UnChecked@3x.png"; sourceTree = "<group>"; };
 		1BEEA22E202D23F100730F2A /* To Do List 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEEA231202D23F100730F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEEA233202D23F100730F2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +70,6 @@
 		1BEEA250202D23F100730F2A /* To Do List 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To Do List 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEEA254202D23F100730F2A /* To_Do_List_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_List_2_0UITests.swift; sourceTree = "<group>"; };
 		1BEEA256202D23F100730F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BEEA264202D258C00730F2A /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2A5D3319CA98E89BD71251FA /* Pods-To Do List 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List 2.0/Pods-To Do List 2.0.release.xcconfig"; sourceTree = "<group>"; };
 		30AB666ADACF28715541C246 /* Pods-To Do List 2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List 2.0UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List 2.0UITests/Pods-To Do List 2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		49F3C5F47795AEF22F86CA6D /* Pods-To Do List 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List 2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List 2.0/Pods-To Do List 2.0.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +107,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3BE46021F7071300ADDE99 /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BEEA231202D23F100730F2A /* AppDelegate.swift */,
+				1BEEA233202D23F100730F2A /* ViewController.swift */,
+				0EF80E6621DE51A30012CF03 /* TableViewCell.swift */,
+				0EBA864021E30B3C002E9CFF /* DetailedViewController.swift */,
+				0EF000A021EA37D600F2599E /* HistoryViewController.swift */,
+				04D10C22202D322C002AA098 /* SaveViewController.swift */,
+				0EAFE44A21F7067200DCB9B6 /* CheckMarkCell.swift */,
+			);
+			path = "Swift Files";
+			sourceTree = "<group>";
+		};
+		0E3BE46221F7075800ADDE99 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1BEEA235202D23F100730F2A /* Main.storyboard */,
+				1BEEA23D202D23F100730F2A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0E3BE46321F7078300ADDE99 /* xib Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EAFE44821F7065F00DCB9B6 /* CheckMarkCell.xib */,
+			);
+			path = "xib Files";
+			sourceTree = "<group>";
+		};
+		0E3BE46421F7079500ADDE99 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				1BEEA238202D23F100730F2A /* To_Do_List_2_0.xcdatamodeld */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		0E3BE46521F707A400ADDE99 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E9F886B21E7841900795628 /* Poppins-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1BEEA225202D23F100730F2A = {
 			isa = PBXGroup;
 			children = (
@@ -142,26 +179,14 @@
 		1BEEA230202D23F100730F2A /* To Do List 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				0EF80E6A21DE55EA0012CF03 /* Checked@2x.png */,
-				0EF80E6821DE55EA0012CF03 /* Checked@3x.png */,
-				0EF80E6921DE55EA0012CF03 /* UnChecked@2x.png */,
-				0EF80E6B21DE55EA0012CF03 /* UnChecked@3x.png */,
-				1BEEA231202D23F100730F2A /* AppDelegate.swift */,
-				1BEEA233202D23F100730F2A /* ViewController.swift */,
-				0EF80E6621DE51A30012CF03 /* TableViewCell.swift */,
-				0EBA864021E30B3C002E9CFF /* DetailedViewController.swift */,
-				1BEEA235202D23F100730F2A /* Main.storyboard */,
-				0EF000A021EA37D600F2599E /* HistoryViewController.swift */,
-				04D10C22202D322C002AA098 /* SaveViewController.swift */,
-				1BEEA264202D258C00730F2A /* Global.swift */,
+				0E3BE46021F7071300ADDE99 /* Swift Files */,
 				1BEEA23B202D23F100730F2A /* Assets.xcassets */,
-				1BEEA23D202D23F100730F2A /* LaunchScreen.storyboard */,
 				0E48898721E7770B00BCBD2D /* GoogleService-Info.plist */,
 				1BEEA240202D23F100730F2A /* Info.plist */,
-				1BEEA238202D23F100730F2A /* To_Do_List_2_0.xcdatamodeld */,
-				0EF80E6221DE4E940012CF03 /* CheckMarkCell.swift */,
-				0EF80E6321DE4E940012CF03 /* CheckMarkCell.xib */,
-				0E9F886B21E7841900795628 /* Poppins-Bold.ttf */,
+				0E3BE46521F707A400ADDE99 /* Fonts */,
+				0E3BE46421F7079500ADDE99 /* DataModels */,
+				0E3BE46321F7078300ADDE99 /* xib Files */,
+				0E3BE46221F7075800ADDE99 /* Storyboards */,
 			);
 			path = "To Do List 2.0";
 			sourceTree = "<group>";
@@ -318,16 +343,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF80E7321DE56350012CF03 /* UnChecked@3x.png in Resources */,
 				1BEEA23F202D23F100730F2A /* LaunchScreen.storyboard in Resources */,
+				0EAFE44921F7065F00DCB9B6 /* CheckMarkCell.xib in Resources */,
 				0E48898821E7770B00BCBD2D /* GoogleService-Info.plist in Resources */,
-				0EF80E7121DE56350012CF03 /* Checked@3x.png in Resources */,
-				0EF80E7221DE56350012CF03 /* UnChecked@2x.png in Resources */,
-				0EF80E7021DE56350012CF03 /* Checked@2x.png in Resources */,
 				1BEEA23C202D23F100730F2A /* Assets.xcassets in Resources */,
 				0E9F886C21E7847500795628 /* Poppins-Bold.ttf in Resources */,
 				1BEEA237202D23F100730F2A /* Main.storyboard in Resources */,
-				0EF80E6521DE4E940012CF03 /* CheckMarkCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,11 +474,10 @@
 				04D10C23202D322C002AA098 /* SaveViewController.swift in Sources */,
 				0EBA864121E30B3C002E9CFF /* DetailedViewController.swift in Sources */,
 				1BEEA23A202D23F100730F2A /* To_Do_List_2_0.xcdatamodeld in Sources */,
-				0EF80E6421DE4E940012CF03 /* CheckMarkCell.swift in Sources */,
-				1BEEA265202D258C00730F2A /* Global.swift in Sources */,
 				0EF000A121EA37D600F2599E /* HistoryViewController.swift in Sources */,
 				0EF80E6721DE51A30012CF03 /* TableViewCell.swift in Sources */,
 				1BEEA232202D23F100730F2A /* AppDelegate.swift in Sources */,
+				0EAFE44B21F7067200DCB9B6 /* CheckMarkCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

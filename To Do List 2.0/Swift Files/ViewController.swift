@@ -101,6 +101,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
                     self.deleteTask(id: task.id!)
                     self.toDoList.reloadData()
+                    self.task.remove(at: indexPath.row)
+                    self.toDoList.deleteRows(at: [indexPath], with: .fade)
                     
                 }
         
@@ -120,7 +122,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func deleteTask(id:String) {
 
         Database.database().reference(withPath: "tasks").child(id).removeValue()
-        
     }
         
 
