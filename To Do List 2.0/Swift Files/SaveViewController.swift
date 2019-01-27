@@ -13,7 +13,6 @@ import FirebaseDatabase
 class SaveViewController: UIViewController {
 
 //Outlets
-    var clickCounter = 0
     @IBOutlet weak var itemToAdd: UITextField!
     @IBOutlet weak var addDate: UITextField!
     @IBOutlet weak var subtask1: UITextField!
@@ -33,6 +32,10 @@ class SaveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        addDate.inputView = datePicker
+        datePicker?.addTarget(self, action: #selector(SaveViewController.dateChanged(datePicker:)), for: .valueChanged)
         refTasks = Database.database().reference().child("tasks")
         
 
@@ -48,6 +51,14 @@ class SaveViewController: UIViewController {
         subtask1.inputAccessoryView = toolbar
         subtask2.inputAccessoryView = toolbar
         subtask3.inputAccessoryView = toolbar
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        addDate.text = dateFormatter.string(from: datePicker.date)
+        
     }
     
     func addTask() {
